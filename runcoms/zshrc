@@ -11,3 +11,74 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Export
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+
+# Alias
+# prezto
+alias upprezto="cd ~/.zprezto/ && git pull && git submodule update --init --recursive"
+# homebrew
+alias upbrew="brew update && brew upgrade --all && brew cleanup"
+alias upcask="brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
+# npm dependency check (https://martinwolf.org/?p=4227)
+alias packages_check="ncu"
+alias packages_upgrade="ncu -u"
+alias packages_update="sudo npm update"
+# apache
+alias apachestart="sudo apachectl start"
+alias apachestop="sudo apachectl stop"
+alias apacherestart="sudo apachectl restart"
+alias apachetest="apachectl configtest"
+# gittower
+alias gt="gittower"
+alias gts="gittower --status"
+# sublime
+alias editpaths="sublime /etc/paths"
+alias editbash="sublime ~/.bash_profile"
+alias editzshr="sublime ~/.zshrc"
+alias editzprofile="sublime ~/.zprofile"
+# alias editfish="sublime ~/.config/fish/config.fish"
+# cd
+alias sites="cd ~/Sync/Sites"
+alias altair="cd ~/Sync/Sites/local.altair"
+alias equator="cd ~/Sync/Sites/local.studiodumbar.com"
+alias vanwunnik="cd ~/Sync/Sites/local.vanwunnik.com"
+alias artlantis="cd ~/Sync/Sites/local.artlantis.nl"
+alias randstad="cd ~/Sync/Sites/local.randstadstyleguide.com"
+alias boskalis="cd ~/Sync/Sites/local.boskalis.com"
+alias soundenergy="cd ~/Sync/Sites/local.soundenergy.info"
+alias daa="cd ~/Sync/Sites/local.designaccountability.nl"
+# ssh (aquila, vanwunnik)
+alias sshaquroot="ssh root@178.62.178.224"
+alias sshaqudropbox="ssh dropbox@178.62.178.224"
+alias sshaquvanwunnnik="ssh vanwunnik@178.62.178.224"
+# ssh (auriga, artlantis)
+alias sshaurroot="ssh root@188.226.144.84"
+alias sshaaurdropbox="ssh dropbox@178.62.178.224"
+alias sshaaurartantis="ssh artlantis@188.226.144.84"
+# ssh (dumbar)
+alias sshdumroot="ssh root@178.62.156.227"
+alias sshdumdropbox="ssh dropbox@178.62.156.227"
+alias sshdumdumbar="ssh dumbar@178.62.156.227"
+alias sshdumaltair="ssh altair@178.62.156.227"
+# ssh (randstad)
+alias sshranroot="ssh root@188.166.1.114"
+alias sshranrandstad="ssh randstad@188.166.1.114"
+# ssh (soundenergy)
+alias sshseroot="ssh root@188.166.125.81"
+alias sshsesd="ssh sd@188.166.125.81"
+alias sshsesoundenergy="ssh soundenergy@188.166.125.81"
+# ssh (design award accountability)
+alias sshdaaroot="ssh root@188.166.73.128"
+alias sshdaasd="ssh sd@188.166.73.128"
+alias sshdaadaa="ssh daa@188.166.73.128"
+# ssh (horizons)
+alias sshhorroot="ssh root@188.226.200.152"
+alias sshhorhorizons="ssh horizons@188.226.200.152"
+# ssh (boskalis, horizons magazine)
+alias sshbosroot="ssh root@188.166.66.210"
+alias sshbossd="ssh sd@188.166.66.210"
+alias sshbosboskalis="ssh boskalis@188.166.66.210"
